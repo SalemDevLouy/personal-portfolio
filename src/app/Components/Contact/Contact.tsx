@@ -2,6 +2,8 @@
 import { Grid, Box, Typography, Rating, TextField } from '@mui/material'
 import React, { useEffect } from 'react'
 import {gsap } from 'gsap';
+import Image from 'next/image'
+
 
 
 
@@ -109,7 +111,7 @@ sx={{fontWeight:200,fontSize:{xs:'.9em',sm:'.85em',md:'1em'}}}>
                       // backgroundColor: '#0c1021 !Important',
                       gap:1}}>
                         <Box sx={{width:{xs:'20px'}}}>
-                            <img src={i.img} alt="" className="img contain" />
+                            <Image src={i.img} alt="" className="img contain" width={20} height={20}/>
                         </Box>
                         <Box sx={{}}>
                             <Typography sx={{color:'white'}}>

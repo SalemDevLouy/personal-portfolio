@@ -4,6 +4,7 @@ import React, { useEffect } from 'react'
 import EduSwiper from './EduSwiper'
 import Btn3 from '../Btn/Btn3'
 import {gsap } from 'gsap';
+import Image from 'next/image'
 
 
 const Portfolio = () => {
@@ -120,7 +121,7 @@ scrollTrigger: {
 className='white text-center w100 title-proj2 op0 y20'
 sx={{fontWeight:200,fontSize:{xs:'.9em',sm:'.85em',md:'1em'}}}>
 
-I obtained a professional bachelor's degree in web development and mobile applications from the University of Djelfa. I also have many certificates from online training courses.
+I obtained a professional bachelor&apos;s degree in web development and mobile applications from the University of Djelfa. I also have many certificates from online training courses.
           </Typography>
             </Box>
         <Box sx={{
@@ -149,13 +150,13 @@ I obtained a professional bachelor's degree in web development and mobile applic
         {`Get yours`}
        
 
-        <img src="https://cdn-icons-png.flaticon.com/128/2722/2722998.png" style={{
+        <Image src="https://cdn-icons-png.flaticon.com/128/2722/2722998.png" style={{
           padding:1,
           filter:`invert(1)`,
           width:'20px',
           borderRadius:'50%',
         
-      }} alt="" className="img" />
+      }} alt="" className="img" width={20} height={20} />
         </>
 
         </Btn3>

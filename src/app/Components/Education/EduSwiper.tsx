@@ -2,7 +2,7 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import Image from 'next/image'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -90,8 +90,8 @@ export default function App() {
                         {i?.link ? i?.link : i.href  }
                           </Typography>
                           <Box sx={{width:'15px',height:'15px',ml:.35}}>
-                            <img src="https://cdn-icons-png.flaticon.com/128/2990/2990159.png"
-                             alt="" className="img invert contain" />
+                            <Image src="https://cdn-icons-png.flaticon.com/128/2990/2990159.png"
+                             alt="" className="img invert contain" width={15} height={15}/>
                           </Box>
                           </a>
 
