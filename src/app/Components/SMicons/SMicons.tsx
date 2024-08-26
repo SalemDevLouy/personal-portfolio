@@ -11,7 +11,7 @@ const SMicons = () => {
         [
             
             {
-                img:`/img/tech/github.png`
+                img:`/img/tech/GitHub.png`
                 ,href:`https://github.com/SalemDevLouy`
             },
             {
