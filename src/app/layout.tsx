@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Salem's Portfolio| Front-end Developer Portfolio</title>
+        <title>Salem&apos;s Portfolio| Front-end Developer Portfolio</title>
         <meta name="description" content={"Front-end Developer with 2+ years of experience in building complex web apps. Proficient in React.js, Next.js, Node.js, and MongoDB"} />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" />

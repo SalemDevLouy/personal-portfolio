@@ -12,6 +12,7 @@ import Footer from './Components/Footer/Footer'
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import {gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from 'next/image'
 
 
 
@@ -154,7 +155,7 @@ gsap.registerPlugin(ScrollTrigger);
                             }
                         }}>
 
-                            <img
+                            <Image
 
                             
                             // layout='fill'
@@ -166,7 +167,7 @@ gsap.registerPlugin(ScrollTrigger);
                             }}
                                 className='img cover'
                                 src='/img/mph1.jpg'
-                                alt="Personal Image"/>
+                                alt="Personal Image" width={15} height={15}/>
                             <Box
                                 className='gradientBg absolute'
                                 sx={{

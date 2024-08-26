@@ -5,6 +5,7 @@ import Btn2 from '../Btn/Btn2'
 import Btn3 from '../Btn/Btn3'
 import PricingCard from './PricingCard'
 import {gsap} from 'gsap';
+import Image from 'next/image'
 
 
 
@@ -150,14 +151,14 @@ sx={{fontWeight:200,fontSize:{xs:'.9em',sm:'.85em',md:'1em'}}}>
         {`Get quote`}
        
 
-        <img src="https://cdn-icons-png.flaticon.com/128/2722/2722998.png" style={{
+        <Image src="https://cdn-icons-png.flaticon.com/128/2722/2722998.png" style={{
           padding:1,
           filter:`invert(1)`,
           width:'20px',
           // background:'white',
           borderRadius:'50%',
         
-      }} alt="" className="img" />
+      }} alt="" className="img"  width={20} height={20}/>
         </>
 
         </Btn3>
