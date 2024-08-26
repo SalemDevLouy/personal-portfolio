@@ -167,7 +167,7 @@ gsap.registerPlugin(ScrollTrigger);
                             }}
                                 className='img cover'
                                 src='/img/mph1.jpg'
-                                alt="Personal Image" width={150} height={200}/>
+                                alt="Personal Image" width={210} height={280}/>
                             <Box
                                 className='gradientBg absolute'
                                 sx={{
