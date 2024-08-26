@@ -166,7 +166,7 @@ gsap.registerPlugin(ScrollTrigger);
                                 zIndex: '2'
                             }}
                                 className='img cover'
-                                src='/img/myphoto.jpg'
+                                src='/img/mph1.jpg'
                                 alt="Personal Image" width={150} height={200}/>
                             <Box
                                 className='gradientBg absolute'
@@ -255,7 +255,7 @@ gsap.registerPlugin(ScrollTrigger);
       <div className="right-edge"></div>
     </div>
         </Box> */}
-
+        
     <Portfolio/>
         <Box sx={{
           backgroundColor: 'black',
