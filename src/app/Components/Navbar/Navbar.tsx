@@ -6,6 +6,7 @@ import Link from 'next/link'
 import SMicons from '../SMicons/SMicons'
 import { useRouter } from 'next/navigation'
 import {gsap } from 'gsap';
+import Image from 'next/image'
 
 
 const Navbar = () => {
@@ -176,10 +177,12 @@ const Navbar = () => {
           className="cursor pointer"
           sx={{ width: '30px' }}
         >
-          <img
+          <Image
             src={isOpen ? "https://cdn-icons-png.flaticon.com/128/10728/10728089.png" : "https://cdn-icons-png.flaticon.com/128/4543/4543046.png"}
             alt=""
             className="img invert"
+            width={30}
+            height={30}
           />
         </Box>
         
@@ -221,7 +224,7 @@ const Navbar = () => {
 
             
             sx={{ width: '20px', height: '20px' }} className="invert">
-              <img src="https://cdn-icons-png.flaticon.com/128/9314/9314363.png" alt="" className="img" />
+              <Image src="https://cdn-icons-png.flaticon.com/128/9314/9314363.png" alt="" className="img" width={20} height={20} />
             </Box>
           </Btn>
 

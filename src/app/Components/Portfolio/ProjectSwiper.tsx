@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Image from 'next/image'
 
 
 // import required modules
@@ -95,19 +96,19 @@ export default function App() {
                         {i?.link ? i?.link : i.href  }
                           </Typography>
                           <Box sx={{width:'15px',height:'15px',ml:.35}}>
-                            <img src="https://cdn-icons-png.flaticon.com/128/2990/2990159.png"
-                             alt="" className="img invert contain" />
+                            <Image src="https://cdn-icons-png.flaticon.com/128/2990/2990159.png"
+                             alt="" className="img invert contain"  width={15} height={15}/>
                           </Box>
                           </a>
 
                         </Box>
                       </Box>
 
-                        <img
+                        <Image
                         style={{
                       borderRadius:'9px',
                         }}
-                        src={i.img} alt="" className="img" />
+                        src={i.img} alt="" className="img" width={10} height={10}/>
                     </Box>
                 </SwiperSlide>
          

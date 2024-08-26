@@ -4,6 +4,7 @@ import React, { useEffect } from 'react'
 import ProjectSwiper from './ProjectSwiper'
 import Btn3 from '../Btn/Btn3'
 import {gsap } from 'gsap';
+import Image from 'next/image'
 
 
 const Portfolio = () => {
@@ -149,13 +150,15 @@ Here are most of my projects that I did during my intership and for my amazing c
         {`Get yours`}
        
 
-        <img src="https://cdn-icons-png.flaticon.com/128/2722/2722998.png" style={{
+        <Image src="https://cdn-icons-png.flaticon.com/128/2722/2722998.png" style={{
           padding:1,
           filter:`invert(1)`,
           width:'20px',
           borderRadius:'50%',
         
-      }} alt="" className="img" />
+      }} alt="" className="img"
+      width={20} height={20} />
+      
         </>
 
         </Btn3>
