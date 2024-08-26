@@ -11,20 +11,20 @@ const SMicons = () => {
         [
             
             {
-                img:`https://cdn-icons-png.flaticon.com/128/2111/2111432.png`
+                img:`/img/tech/github.png`
                 ,href:`https://github.com/SalemDevLouy`
             },
             {
-                img:`https://cdn-icons-png.flaticon.com/128/1384/1384014.png`
+                img:`/img/linkedin.png`
                 ,href:`https://www.linkedin.com/in/salem-louafi-532869235/`
             },
             {
-                img:`https://cdn-icons-png.flaticon.com/128/6244/6244710.png`
+                img:`/img/email.png`
                 ,href:`mailto:louafisalem79@gmail.com`
             },
             
             {
-                img:`https://cdn-icons-png.flaticon.com/128/909/909263.png`
+                img:`/img/cv.png`
                 ,href:`https://drive.google.com/file/d/1Cw_3fxu-OWDIpnoR-GhAetzDd3CSsXCS/view?usp=drive_link`
             },
             
@@ -36,7 +36,7 @@ const SMicons = () => {
             key={link.img} href={`${link.href}`}>
 
             <Box sx={{width:'30px'}}>
-                <Image src={link?.img} alt="" className="img invert" width={15} height={15}/>
+                <Image src={link?.img} alt="" className="img invert" width={20} height={20}/>
             </Box>
             </a> 
         })

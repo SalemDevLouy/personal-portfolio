@@ -64,7 +64,7 @@ const Hero = () => {
         {`View Work `}
        
 
-        <Image src="https://cdn-icons-png.flaticon.com/128/1549/1549454.png" style={{
+        <Image src="/img/arrow-right.png" style={{
           padding:1,
           filter:`invert(1)`,
           width:'20px',

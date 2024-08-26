@@ -6,20 +6,20 @@ import Image from 'next/image'
 
 
 const skills = [
-    { name: 'HTML', img: 'https://cdn-icons-png.flaticon.com/128/1051/1051277.png' },
-    { name: 'React', img: 'https://cdn-icons-png.flaticon.com/128/875/875209.png' },
-    { name: 'Scss', img: 'https://cdn-icons-png.flaticon.com/128/5968/5968358.png' },
-    { name: 'Tailwind', img: '/img/Tailwind.png' },
-    { name: 'Next.js', img: 'https://www.wpgraphql.com/_next/image?url=%2Flogos%2Flogo-nextjs.png&w=384&q=75' },
-    { name: 'MongoDB', img: 'https://th.bing.com/th/id/R.0e23481b805fa66eb9ff0c177ff27030?rik=00LN9yVT3nMAyw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2flogo-mongodb-png-mongodb-1600.png&ehk=YwJU48GqAzZ6V3Zlafc4pyilw%2biV5XBxEO7chpNV3M8%3d&risl=&pid=ImgRaw&r=0' },
-    { name: 'JavaScript', img: 'https://cdn-icons-png.flaticon.com/128/5968/5968292.png' },
-    { name: 'Typescript', img: 'https://cdn-icons-png.flaticon.com/128/5968/5968381.png' },
-    { name: 'Express.js', img: 'https://th.bing.com/th/id/R.c502658a509d27b53679b3ef73c0d82f?rik=dFP%2b9LyCq64MMg&pid=ImgRaw&r=0' },
-    { name: 'MySQL', img: 'https://cdn-icons-png.flaticon.com/128/5968/5968313.png' },
-    { name: 'Node.js', img: 'https://cdn-icons-png.flaticon.com/128/15379/15379746.png' },
-    { name: 'Jira', img: 'https://cdn.freelogovectors.net/wp-content/uploads/2023/09/jira-software_logo-freelogovectors.net_.png' },
-    { name: 'Git', img: 'https://cdn-icons-png.flaticon.com/128/15466/15466163.png' },
-    { name: 'Github', img: '/img/GitHub.png' },
+    { name: 'HTML', img: '/img/tech/HTML5.png' },
+    { name: 'React', img: '/img/tech/React.png' },
+    { name: 'Scss', img: '/img/tech/Sass.png' },
+    { name: 'Tailwind', img: '/img/tech/Tailwind.png' },
+    { name: 'Next.js', img: '/img/tech/Next.js.png' },
+    { name: 'MongoDB', img: '/img/tech/MongoDB.png' },
+    { name: 'JavaScript', img: '/img/tech/Js.png' },
+    { name: 'Typescript', img: '/img/tech/Ts.png' },
+    { name: 'Express.js', img: '/img/tech/Express.png' },
+    { name: 'MySQL', img: '/img/tech/MySQL.png' },
+    { name: 'Node.js', img: '/img/tech/Node.js.png' },
+    { name: 'Jira', img: '/img/tech/Jira.png' },
+    { name: 'Git', img: '/img/tech/Git.png' },
+    { name: 'Github', img: '/img/tech/GitHub.png' },
 
   ];
 const Portfolio = () => {

@@ -61,14 +61,9 @@ export default function App() {
                 {
                   img:`/img/projects/fiverrclone.jpg`,
                   title: `5ademni (fiverr clone)`,
-                  href : `/`
-                },
-                {
-                  img:`/img/mph1.jpg`,
-                  title: `My Photo `,
-                  link:'',
-                  href : `/`
-                } 
+                  href : `/`,
+                  link:''
+                }
             ].map(i=>{
                 return <SwiperSlide  key={i.img}>
                     <Box 
@@ -96,8 +91,8 @@ export default function App() {
                         {i?.link ? i?.link : i.href  }
                           </Typography>
                           <Box sx={{width:'15px',height:'15px',ml:.35}}>
-                            <Image src="https://cdn-icons-png.flaticon.com/128/2990/2990159.png"
-                             alt="" className="img invert contain"  fill/>
+                            <Image src="/img/link.png"
+                             alt="" className="img invert contain"  width={15} height={15}/>
                           </Box>
                           </a>
 
@@ -108,7 +103,7 @@ export default function App() {
                         style={{
                       borderRadius:'9px',
                         }}
-                        src={i.img} alt="" className="img" width={10} height={10}/>
+                        src={i.img} alt="" className="img" width={360} height={480}/>
                     </Box>
                 </SwiperSlide>
          

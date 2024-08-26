@@ -150,7 +150,7 @@ Here are most of my projects that I did during my intership and for my amazing c
         {`Get yours`}
        
 
-        <Image src="https://cdn-icons-png.flaticon.com/128/2722/2722998.png" style={{
+        <Image src="/img/right-arrow.png" style={{
           padding:1,
           filter:`invert(1)`,
           width:'20px',

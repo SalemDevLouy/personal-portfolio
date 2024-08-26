@@ -151,7 +151,7 @@ sx={{fontWeight:200,fontSize:{xs:'.9em',sm:'.85em',md:'1em'}}}>
         {`Get quote`}
        
 
-        <Image src="https://cdn-icons-png.flaticon.com/128/2722/2722998.png" style={{
+        <Image src="/img/right-arrow.png" style={{
           padding:1,
           filter:`invert(1)`,
           width:'20px',
