@@ -97,7 +97,7 @@ export default function App() {
                           </Typography>
                           <Box sx={{width:'15px',height:'15px',ml:.35}}>
                             <Image src="https://cdn-icons-png.flaticon.com/128/2990/2990159.png"
-                             alt="" className="img invert contain"  width={15} height={15}/>
+                             alt="" className="img invert contain"  fill/>
                           </Box>
                           </a>
 
