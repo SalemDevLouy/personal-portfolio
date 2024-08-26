@@ -10,11 +10,11 @@ import Image from 'next/image'
 const Contact = () => {
   ;
   const contacts = [
-    { name: 'Facebook', img: '/img/socielmedia/facebook.png' , link:'https://www.facebook.com/abdeldjouad.louafi/'},
-    { name: 'Instagram', img: '/img/socielmedia/instagram.png' , link:'https://www.instagram.com/salem_louafi/'},
-    { name: 'Whatsapp', img: '/img/socielmedia/whatsapp.png' , link:'https://wa.me/213673389128'},
-    { name: 'Telegram', img: '/img/socielmedia/telegram.png' , link:'https://t.me/+213673389128'},
-    { name: 'Linkedin', img: '/img/socielmedia/linkedin.png' , link:'https://www.linkedin.com/in/salem-louafi-532869235/'},
+    { name: 'Facebook', image: '/img/socielmedia/facebook.png' , link:'https://www.facebook.com/abdeldjouad.louafi/'},
+    { name: 'Instagram', image: '/img/socielmedia/instagram.png' , link:'https://www.instagram.com/salem_louafi/'},
+    { name: 'Whatsapp', image: '/img/socielmedia/whatsapp.png' , link:'https://wa.me/213673389128'},
+    { name: 'Telegram', image: '/img/socielmedia/telegram.png' , link:'https://t.me/+213673389128'},
+    { name: 'Linkedin', image: '/img/socielmedia/linkedin.png' , link:'https://www.linkedin.com/in/salem-louafi-532869235/'},
     
 
   ];
@@ -111,7 +111,7 @@ sx={{fontWeight:200,fontSize:{xs:'.9em',sm:'.85em',md:'1em'}}}>
                       // backgroundColor: '#0c1021 !Important',
                       gap:1}}>
                         <Box sx={{width:{xs:'20px'}}}>
-                            <Image src={i.img} alt="" className="img contain" width={20} height={20}/>
+                            <Image src={i.image} alt="" className="image contain" width={20} height={20}/>
                         </Box>
                         <Box sx={{}}>
                             <Typography sx={{color:'white'}}>
