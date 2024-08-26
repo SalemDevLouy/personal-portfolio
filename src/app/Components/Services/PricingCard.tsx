@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 import Btn from '../Btn/Btn';
 import {gsap } from 'gsap';
+import Image from 'next/image'
 
 export default function Card({sx, id ,className, miniTitle, title, text, perks, href}:any) {
   const [position, setPosition] = React.useState({ x: 0, y: 0 });
@@ -78,11 +79,11 @@ export default function Card({sx, id ,className, miniTitle, title, text, perks, 
           {perks && perks.map((perk : {optional: boolean, text: string } | string, index : number) => (
             <Box key={index} sx={{ gap: 2, my: 1.5 }} className="flex row items-start">
              {typeof perk !== 'string' && perk?.optional === true ? <Box sx={{ width: '20px', height: '20px' }} className="">
-                <img src="https://cdn-icons-png.flaticon.com/128/992/992651.png" alt="" className="img invert" />
+                <Image src="https://cdn-icons-png.flaticon.com/128/992/992651.png" alt="" className="img invert" width={20} height={20}/>
               </Box>
             :  <Box sx={{ minWidth: '20px', height: '20px' }} className="">
-            <img src="https://cdn-icons-png.flaticon.com/128/4315/4315445.png" alt="" 
-            className="img contain" />
+            <Image src="https://cdn-icons-png.flaticon.com/128/4315/4315445.png" alt="" 
+            className="img contain" width={20} height={20} />
           </Box>
             }
               <Typography sx={{ 
@@ -117,7 +118,7 @@ export default function Card({sx, id ,className, miniTitle, title, text, perks, 
               Get Started
             </Typography>
             <Box sx={{ width: '20px', height: '20px' }} className="invert">
-              <img src="https://cdn-icons-png.flaticon.com/128/13554/13554816.png" alt="" className="img" />
+              <Image src="https://cdn-icons-png.flaticon.com/128/13554/13554816.png" alt="" className="img" width={20} height={20}/>
             </Box>
           </Btn>
        

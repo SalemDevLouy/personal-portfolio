@@ -1,6 +1,7 @@
 "use client"
 import { Box } from '@mui/material'
 import React from 'react'
+import Image from 'next/image'
 
 const SMicons = () => {
   return (
@@ -35,7 +36,7 @@ const SMicons = () => {
             key={link.img} href={`${link.href}`}>
 
             <Box sx={{width:'30px'}}>
-                <img src={link?.img} alt="" className="img invert" />
+                <Image src={link?.img} alt="" className="img invert" width={15} height={15}/>
             </Box>
             </a> 
         })
