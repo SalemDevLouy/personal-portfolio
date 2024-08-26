@@ -98,11 +98,11 @@ export default function App() {
                         </Box>
                       </Box>
 
-                        <img
+                        <Image
                         style={{
                       borderRadius:'9px',
                         }}
-                        src={i.img} alt="" className="img" />
+                        src={i.img} alt="" className="img"  width={15} height={15}/>
                     </Box>
                 </SwiperSlide>
          

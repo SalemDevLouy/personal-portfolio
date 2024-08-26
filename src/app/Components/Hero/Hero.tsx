@@ -3,6 +3,7 @@ import { Box, Container, Divider, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
 import Btn2 from '../Btn/Btn2'
 import {gsap} from 'gsap';
+import Image from 'next/image'
 
 
 const Hero = () => {
@@ -63,14 +64,14 @@ const Hero = () => {
         {`View Work `}
        
 
-        <img src="https://cdn-icons-png.flaticon.com/128/1549/1549454.png" style={{
+        <Image src="https://cdn-icons-png.flaticon.com/128/1549/1549454.png" style={{
           padding:1,
           filter:`invert(1)`,
           width:'20px',
           // background:'white',
           borderRadius:'50%',
         
-      }} alt="" className="img" />
+      }} alt="" className="img"  width={20} height={20}/>
         </>
 
         </Btn2>
