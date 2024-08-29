@@ -67,7 +67,7 @@ export default function App() {
                 {
                   img:`/img/projects/dashboard.png`,
                   title: `Admin Dashboard +2 lang`,
-                  href : `/`,
+                  href : `https://github.com/SalemDevLouy/nextjs-arabic-dashboard.git`,
                   link:''
                 }
             ].map(i=>{
