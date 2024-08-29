@@ -16,7 +16,7 @@ const SMicons = () => {
             },
             {
                 img:`/img/linkedin.png`
-                ,href:`https://www.linkedin.com/in/salem-louafi-532869235/`
+                ,href:`https://www.linkedin.com/in/salem-louafi-off`
             },
             {
                 img:`/img/email.png`
