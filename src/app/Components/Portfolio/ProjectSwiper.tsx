@@ -63,6 +63,12 @@ export default function App() {
                   title: `5ademni (fiverr clone)`,
                   href : `/`,
                   link:''
+                },
+                {
+                  img:`/img/projects/dashboard.png`,
+                  title: `Admin Dashboard +2 lang`,
+                  href : `/`,
+                  link:''
                 }
             ].map(i=>{
                 return <SwiperSlide  key={i.img}>
