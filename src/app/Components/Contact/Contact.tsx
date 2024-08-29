@@ -14,7 +14,7 @@ const Contact = () => {
     { name: 'Instagram', image: '/img/socielmedia/instagram.png' , link:'https://www.instagram.com/salem_louafi/'},
     { name: 'Whatsapp', image: '/img/socielmedia/whatsapp.png' , link:'https://wa.me/213673389128'},
     { name: 'Telegram', image: '/img/socielmedia/telegram.png' , link:'https://t.me/+213673389128'},
-    { name: 'Linkedin', image: '/img/socielmedia/linkedin.png' , link:'https://www.linkedin.com/in/salem-louafi-532869235/'},
+    { name: 'Linkedin', image: '/img/socielmedia/linkedin.png' , link:'https://www.linkedin.com/in/salem-louafi-off/'},
     
 
   ];
