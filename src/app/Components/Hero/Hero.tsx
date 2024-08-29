@@ -34,7 +34,7 @@ const Hero = () => {
         fontSize:{xs:'2.6em',sm:'3em',md:'3em',lg:'3.5em'},fontWeight:'800'}} 
         component='h1'
         className='white  center auto text-center'>
-        Hello everyone I`&apos;m Louafi Salem
+        Hello everyone I&apos;m Louafi Salem
         </Typography>
         <Typography sx={{maxWidth:'650px',
         py:2,
