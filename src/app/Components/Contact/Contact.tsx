@@ -1,5 +1,5 @@
 "use client"
-import { Grid, Box, Typography, Rating, TextField } from '@mui/material'
+import { Grid, Box, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
 import {gsap } from 'gsap';
 import Image from 'next/image'
@@ -19,22 +19,22 @@ const Contact = () => {
 
   ];
 
-  const animateSkills = () => {
+  const animateContacts = () => {
     const testimonialsTL = gsap.timeline({
       scrollTrigger: {
-        trigger: ".skills-subtitle",
+        trigger: ".Contacts-subtitle",
         start: "top 80%",
       }
     });
   
-    testimonialsTL.to('.skills-title', {
+    testimonialsTL.to('.Contacts-title', {
         y: 0,
       opacity: 1,
       duration: .35,
     
     });
   
-    testimonialsTL.to('.skills-subtitle', {
+    testimonialsTL.to('.Contacts-subtitle', {
         y: 0,
       opacity: 1,
       duration: .25,
@@ -51,7 +51,7 @@ const Contact = () => {
   };
   
   useEffect(() => {
-  animateSkills();
+  animateContacts();
   }, [])
   
   return (

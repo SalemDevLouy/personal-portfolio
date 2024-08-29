@@ -61,14 +61,14 @@ export default function App() {
                 {
                   img:`/img/projects/fiverrclone.jpg`,
                   title: `5ademni (fiverr clone)`,
-                  href : `/`,
-                  link:''
+                  href : ``,
+                  gitlink:'/'
                 },
                 {
                   img:`/img/projects/dashboard.png`,
                   title: `Admin Dashboard +2 lang`,
-                  href : `https://github.com/SalemDevLouy/nextjs-arabic-dashboard.git`,
-                  link:''
+                  href : ``,
+                  gitlink:'https://github.com/SalemDevLouy/nextjs-arabic-dashboard.git'
                 }
             ].map(i=>{
                 return <SwiperSlide  key={i.img}>
@@ -89,12 +89,12 @@ export default function App() {
                         {i?.title}
                           </Typography>
 
-                          <a href={i?.link ? i?.link : i.href} 
+                          <a href={i?.gitlink ? i?.gitlink : i.href} 
                           target='_blank'
                           className="white flex row center items-center  decor-none">
 
                           <Typography className='cursor pointer' sx={{pt:.5,fontSize:'.8em'}}>
-                        {i?.link ? i?.link : i.href  }
+                        {i?.gitlink ?" View Repo" : "View Live Demo"  } 
                           </Typography>
                           <Box sx={{width:'15px',height:'15px',ml:.35}}>
                             <Image src="/img/link.png"
