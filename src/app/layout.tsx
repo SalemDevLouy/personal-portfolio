@@ -4,7 +4,7 @@ import Script from 'next/script';
 import "../Styles/styles.css";
 import Navbar from "./Components/Navbar/Navbar";
 import FullscreenCover from "./Components/FullscreenCover/FullscreenCover";
-
+import { Analytics } from "@vercel/analytics/react"
 export const metadata: Metadata = {
   title: "Salem's Portfolio",
   description: "Front-end Developer with 2+ years of experience in building complex web apps. Proficient in React.js, Next.js, Node.js, and MongoDB",
@@ -40,6 +40,7 @@ export default function RootLayout({
         <FullscreenCover />
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );

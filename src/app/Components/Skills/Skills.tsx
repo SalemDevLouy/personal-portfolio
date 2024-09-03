@@ -88,7 +88,6 @@ xl:'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 33.55), #000 35%)',
                 py:4}}>
             <Typography className='white text-center auto skills-title op0 y20' sx={{pb:1,fontWeight:700,
               fontSize:{xs:'3em',sm:'3em',md:'4em'}}}>
-                {/* My Expertise and Abilities */}
                 My Technical Skills
 
 </Typography>
