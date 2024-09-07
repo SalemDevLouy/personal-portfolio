@@ -4,6 +4,7 @@ import Script from 'next/script';
 import "../Styles/styles.css";
 import Navbar from "./Components/Navbar/Navbar";
 import FullscreenCover from "./Components/FullscreenCover/FullscreenCover";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react"
 export const metadata: Metadata = {
   title: "Salem's Portfolio",
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
