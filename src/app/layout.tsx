@@ -7,7 +7,7 @@ import FullscreenCover from "./Components/FullscreenCover/FullscreenCover";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react"
 export const metadata: Metadata = {
-  title: "Salem's Portfolio",
+  title: "Salem Dev",
   description: "Front-end Developer with 2+ years of experience in building complex web apps. Proficient in React.js, Next.js, Node.js, and MongoDB",
 };
 
