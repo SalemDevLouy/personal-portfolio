@@ -21,6 +21,7 @@ export default function RootLayout({
       <head>
         <title>Salem&apos;s Portfolio| Front-end Developer Portfolio</title>
         <meta name="description" content={"Front-end Developer with 2+ years of experience in building complex web apps. Proficient in React.js, Next.js, Node.js, and MongoDB"} />
+ <meta property="og:image" content="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
