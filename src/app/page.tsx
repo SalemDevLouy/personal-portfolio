@@ -81,7 +81,7 @@ gsap.registerPlugin(ScrollTrigger);
             fontWeight:200,fontSize:{xs:'.9em',sm:'.85em',md:'1em'}}}>
               {
                 `
-                I have over 2 years experience with building fullstack apps,
+                I have over ${new Date().getFullYear() - 2022} years experience with building fullstack apps,
                  primarily for Algerians businesses
                 
                 using the best & latest technologies like Typescript + Nextjs to 
@@ -166,7 +166,7 @@ gsap.registerPlugin(ScrollTrigger);
                                 zIndex: '2'
                             }}
                                 className='img cover'
-                                src='/img/mph1.jpg'
+                                src='/img/me.jpg'
                                 alt="Personal Image" fill/>
                             <Box
                                 className='gradientBg absolute'
@@ -245,7 +245,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-    {/* <Education/>
+    <Education/>
         <Box sx={{
           backgroundColor: 'black',
            zIndex:'10',
@@ -254,7 +254,7 @@ gsap.registerPlugin(ScrollTrigger);
       <div className="left-edge"></div>
       <div className="right-edge"></div>
     </div>
-        </Box> */}
+        </Box>
         
     <Portfolio/>
         <Box sx={{

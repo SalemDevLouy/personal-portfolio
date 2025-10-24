@@ -41,12 +41,12 @@ const Contact = () => {
       delay:.15
     });
   
-    testimonialsTL.to('.skill-item', {
+    testimonialsTL.to('.Contact-item', {
         y: 0,
       opacity: 1,
-      duration: .15,
-      stagger: 0.2,
-    
+      duration: .5,
+      stagger: 0.1,
+      delay:.3,
     });
   };
   
@@ -105,7 +105,7 @@ sx={{fontWeight:200,fontSize:{xs:'.9em',sm:'.85em',md:'1em'}}}>
                     return <a href={i.link} key={i?.name} target='_blank'>
                       <Box
                     key={i?.name}
-                    className='flex row tech-item skill-item op0 y20  ' sx={{
+                    className='flex row tech-item Contact-item op0 y20  ' sx={{
                       border: '1px solid #ffffff21 ',
                       background: '#0c102178',
                       // backgroundColor: '#0c1021 !Important',

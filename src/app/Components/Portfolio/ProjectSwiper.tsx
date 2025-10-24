@@ -54,9 +54,22 @@ export default function App() {
         {
             [
                 {
-                  img:`/img/projects/dwam.jpg`,
+                  img:`/img/projects/DWAM.png`,
                   title: `DWAM Landing Page`,
                   href : `https://dwam.vercel.app/`
+                  },
+                  {
+                    img:`/img/projects/daliloka.png`,
+                    title: `Daliloka BMC Maker`,
+                    href : `https://daliloka-app.vercel.app/`,
+                    gitlink:''
+                  },
+                  
+                {
+                  img:`/img/projects/depanage.png`,
+                  title: `Depanage , Graduation Project`,
+                  href : ``,
+                  gitlink:'/'
                 },
                 {
                   img:`/img/projects/fiverrclone.jpg`,
@@ -69,7 +82,9 @@ export default function App() {
                   title: `Admin Dashboard +2 lang`,
                   href : ``,
                   gitlink:'https://github.com/SalemDevLouy/nextjs-arabic-dashboard.git'
-                }
+                },
+                
+
             ].map(i=>{
                 return <SwiperSlide  key={i.img}>
                     <Box 

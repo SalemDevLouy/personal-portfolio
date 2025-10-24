@@ -45,15 +45,15 @@ const Portfolio = () => {
         y: 0,
       opacity: 1,
       duration: .25,
-      delay:.15
+      delay:.2
     });
-  
+
     testimonialsTL.to('.skill-item', {
         y: 0,
       opacity: 1,
-      duration: .15,
-      stagger: 0.2,
-    
+      duration: .5,
+      stagger: 0.1,
+      delay:.3,
     });
   };
   

@@ -126,7 +126,7 @@ const Navbar = () => {
           </Link>
         </Box>
 
-        <Box onClick={()=>{closeMenu(); 
+        {/* <Box onClick={()=>{closeMenu(); 
           gsap.to(window, {duration:1.5, delay:.45, scrollTo: "#"});
 
         }} sx={{ top: '48%'}} className='white cursor pointer nav-menu'>
@@ -135,12 +135,12 @@ const Navbar = () => {
           Blog
           </Typography>
           </Link>
-        </Box>
+        </Box> */}
 
         <Box onClick={()=>{closeMenu(); 
    gsap.to(window, {duration:1.5, delay:.45, scrollTo: "#Contact"});
 
-        }} sx={{ top: '56%'}} className='white cursor pointer nav-menu'>
+        }} sx={{ top: '48%'}} className='white cursor pointer nav-menu'>
           <Link className='decor-none white' href='/'>
           <Typography sx={{fontSize:'1.2em'}}>
           Contact
