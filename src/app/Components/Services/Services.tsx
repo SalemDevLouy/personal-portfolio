@@ -43,7 +43,12 @@ const Services = () => {
         zIndex: 10,
         py: 12,
         px: 2,
-        background: 'black',
+         backgroundImage:'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 43.55), #000 35%)',
+        background : {
+          xs:
+          'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 33.55), #000 45%)',
+        xl:'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 33.55), #000 35%)',
+        },
       }}
       className="flex auto"
     >

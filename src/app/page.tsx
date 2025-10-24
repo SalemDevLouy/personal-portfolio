@@ -13,6 +13,8 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import {gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from 'next/image'
+import ReviewSection from './Components/ReviewsDEST/ReviewSection'
+import Testimonials from './Components/Testimonials/Testimonials'
 
 
 
@@ -50,7 +52,11 @@ gsap.registerPlugin(ScrollTrigger);
       // minHeight:'100vh',
       // height:'1500px',
 
-      background:'black'
+      backgroundImage:'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 43.55), #000 35%)',
+        background : {xs:
+          'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 33.55), #000 45%)',
+xl:'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 33.55), #000 35%)',
+        },
       
       }}>
      
@@ -311,6 +317,21 @@ gsap.registerPlugin(ScrollTrigger);
       <div className="right-edge"></div>
     </div>
         </Box>
+        <Testimonials/>
+          <Box 
+        className='auto flex center justify-center'
+        sx={{
+          backgroundColor: 'black',
+           zIndex:'10',
+          pt:0,
+          margin:0
+          }}>
+        <div className="custom-br">
+      <div className="left-edge"></div>
+      <div className="right-edge"></div>
+    </div>
+        </Box>
+         
         
         
 

@@ -10,14 +10,15 @@ export const testimonials = [
 
     {
         title: 'Deserves a 5 stars rating and more.',
-        name:'“(Omar, Founder/CEO/Lead Interior Architect )',
+        name:'“(Aymen, Commerce Business Owner)',
         text : `Very professional and understanding. Prompt reply and fast delivery. Vito deserves a 5 stars rating and more.`
     },
     {
-        title:'Professional work, Affordable prices ✔️✔️✔️',
-        name:'“(Carla Kiwan, Beauty Brand Founder)',
+        title:'Professional work ✔️✔️✔️',
+        name:'“(B.Siradj, Tayssir-bac Co-Founder)',
         text:`Professional work
-        Affordable prices
+        Fast delivery
+        Excellent communication
         Great effort
         ✔️✔️✔️
         `
@@ -25,32 +26,32 @@ export const testimonials = [
     ,
     {
         title: 'Amazing assistance and fast delivery with customization',
-        name:'“(Rudy Bounafeh, Pet Business Owner)',
+        name:'“(Rihem & Ikram , Daliloka Founders)',
         text : `Amazing assistance and fast delivery with customization, Vito's always ready to help as soon as possible in case of any bug`
     },
-    {
-      name:'“(Fady, Electronics Relatiler)',
-      title: 'Very professional and responsive. Highly recommended!',
-      text: `Excellent service! My eCommerce site looks fantastic and works perfectly. Vito is very professional and responsive. Highly recommended!`
-    },
+    // {
+    //   name:'“(Fady, Electronics Relatiler)',
+    //   title: 'Very professional and responsive. Highly recommended!',
+    //   text: `Excellent service! My eCommerce site looks fantastic and works perfectly. Vito is very professional and responsive. Highly recommended!`
+    // },
    
-    {
-        title :`I knew I made the right choice - `,
-        name:`”(Yehya, Founder of Teentops)`,
-        text : `I was so impressed with the shop he built for me - it was so easy 
-        to use! And when he built my 
-        Android app, I knew I made the right choice. No regrets at all.
-        `
-    },
+    // {
+    //     title :`I knew I made the right choice - `,
+    //     name:`”(Yehya, Founder of Teentops)`,
+    //     text : `I was so impressed with the shop he built for me - it was so easy 
+    //     to use! And when he built my 
+    //     Android app, I knew I made the right choice. No regrets at all.
+    //     `
+    // },
     
     
-    {
-        title :`They made it work perfectly - `,
-        name:`”(Powerhouse’s Owner)`,
-        text : `Vito really came through for me. I was worried that my huge inventory 
-        would be too much for the site to handle, 
-        but he made it work perfectly. I’m grateful.`
-    },
+    // {
+    //     title :`They made it work perfectly - `,
+    //     name:`”(Powerhouse’s Owner)`,
+    //     text : `Vito really came through for me. I was worried that my huge inventory 
+    //     would be too much for the site to handle, 
+    //     but he made it work perfectly. I’m grateful.`
+    // },
     // {
     //     title : `I just love it! -`,
     //     name:`“(Zekra Advertising Specialist)`,
@@ -62,7 +63,7 @@ export const testimonials = [
 ];
 
 
-const Portfolio = () => {
+const Testimonials = () => {
 
     const animateTestimonials = () => {
         const testimonialsTL = gsap.timeline({
@@ -108,8 +109,6 @@ const Portfolio = () => {
         background : {xs:
           'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 33.55), #000 45%)',
 xl:'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 33.55), #000 35%)',
-
-
         },
 
         pb:13,
@@ -176,4 +175,4 @@ Real stories from satisfied clients who I had the honour to work with.
   )
 }
 
-export default Portfolio
+export default Testimonials

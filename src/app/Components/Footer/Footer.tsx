@@ -25,10 +25,10 @@ const Footer = () => {
         py:2,
         fontSize:{xs:'.95em',sm:'1em',md:'1em',lg:'1.15em'},fontWeight:'600'}} 
         component='h2'
-        className='white center auto text-center'>
+        className='white center auto text-center text-nowrap'>
           
           {
-            `Louafi Salem | 2024`
+            `Louafi Salem | ${new Date().getFullYear()}`
           }
         </Typography>                      
                     </Box> 

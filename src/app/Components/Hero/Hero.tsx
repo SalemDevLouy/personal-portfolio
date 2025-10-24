@@ -4,6 +4,49 @@ import React, { useEffect } from 'react'
 import Btn2 from '../Btn/Btn2'
 import { gsap } from 'gsap'
 import Image from 'next/image'
+import ReviewSection from '../ReviewsDEST/ReviewSection'
+export const reviewData = [
+  {
+    title:
+      'The platform completely streamlined our workflow. The performance and UI responsiveness exceeded expectations.',
+  },
+  {
+    title:
+      'Excellent experience overall — the integration process was straightforward and well-documented.',
+  },
+  {
+    title:
+      'The customer support team was incredibly efficient in resolving deployment-related issues.',
+  },
+  // {
+  //   title:
+  //     'I appreciated the intuitive dashboard and clean design; onboarding new users was effortless.',
+  // },
+  // {
+  //   title:
+  //     'Reliability has been outstanding — we have experienced zero downtime over several months of use.',
+  // },
+  // {
+  //   title:
+  //     'The code quality and modular structure made customization remarkably simple.',
+  // },
+  // {
+  //   title:
+  //     'A robust, production-ready solution with consistent performance across all supported devices.',
+  // },
+  // {
+  //   title:
+  //     'Security implementation follows best practices, offering peace of mind for enterprise usage.',
+  // },
+  // {
+  //   title:
+  //     'The mobile version performs smoothly, maintaining parity with desktop functionality.',
+  // },
+  // {
+  //   title:
+  //     'Frequent updates demonstrate an ongoing commitment to product improvement and user satisfaction.',
+  // },
+];
 
 const Hero = () => {
   useEffect(() => {
@@ -23,6 +66,7 @@ const Hero = () => {
         minHeight: '100vh',
       }}
     >
+      <ReviewSection data={reviewData} />
       {/* Main Heading */}
       <Typography
         sx={{

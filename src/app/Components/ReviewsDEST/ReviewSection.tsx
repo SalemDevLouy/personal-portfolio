@@ -9,10 +9,10 @@ export interface MyComponentProps {
   data: { title: string }[];
 }
 
-const MyComponent: React.FC<MyComponentProps> = ({ data }) => {
+const ReviewSection: React.FC<MyComponentProps> = ({ data }) => {
   return (
     <Box sx={{mt:{xs:0,sm:6},maxWidth:'lg'}} className='flex row wrap w100 '>
-     <Box className='justify-evenly w100' sx={{display:{xs:'none',md:'flex'}}}>
+     <Box className='justify-evenly w100' sx={{display:{xs:'none',md:'flex'}}} style={{opacity:'0.4'}}>
 
       {data.slice(0,3).map((item, index) => (
         <Box 
@@ -34,4 +34,4 @@ const MyComponent: React.FC<MyComponentProps> = ({ data }) => {
   );
 };
 
-export default MyComponent;
+export default ReviewSection;
