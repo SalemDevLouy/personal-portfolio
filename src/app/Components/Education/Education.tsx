@@ -213,20 +213,7 @@ const Portfolio = () => {
         ))}
       </Box>
 
-      <Box sx={{
-        pt:4,gap:2}} className='flex w100 center items-center justify-center auto'>
-        <Btn3 
-          onClick={(e : any)=>{
-            e.preventDefault();
-            gsap.to(window, {duration:1, scrollTo: "#Contact"});
-          }}
-          className='flex gap gap2 get-urs op0 y20'
-          styles={{background:'black', fontWeight:'300'}}>
-          <>
-            {`Get yours`}
-          </>
-        </Btn3>
-      </Box>
+
     </Grid>
   )
 }

@@ -462,7 +462,7 @@ button[disabled] {
 .custom-br {
   width: 90%;
   opacity: 0.6;
-  height: 1px;
+  height: 2px;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), #550df4, rgba(255, 255, 255, 0));
   position: relative;
   margin: 0.5em auto;
