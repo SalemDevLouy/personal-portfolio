@@ -51,12 +51,14 @@ gsap.registerPlugin(ScrollTrigger);
       pt:{xs:15},
       // minHeight:'100vh',
       // height:'1500px',
-
+      px:{md:10,lg:20,xl:28},
       backgroundImage:'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 43.55), #000 35%)',
-        background : {xs:
+        background : {
+          xs:
           'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 33.55), #000 45%)',
-xl:'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 33.55), #000 35%)',
+          xl:'radial-gradient(circle at 50% 50%, rgba(17, 24, 65, 33.55), #000 35%)',
         },
+        overflow:'hidden'
       
       }}>
      
