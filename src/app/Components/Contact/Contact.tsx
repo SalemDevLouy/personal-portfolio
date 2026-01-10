@@ -1,59 +1,71 @@
 "use client"
-import { Grid, Box, Typography } from '@mui/material'
-import React, { useEffect } from 'react'
-import {gsap } from 'gsap';
+import { Grid, Box, Typography, TextField } from '@mui/material'
+import React, { useState } from 'react'
 import Image from 'next/image'
+import emailjs from '@emailjs/browser'
+// import Btn2 from '../Btn/Btn2'
+import Btn3 from '../Btn/Btn3'
 
 
 
+const Portfolio = () => {
+  const [info,setInfo] = useState({Fname:'',email:'',message:''})
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
-const Contact = () => {
-  ;
-  const contacts = [
-    { name: 'Facebook', image: '/img/socielmedia/facebook.png' , link:'https://www.facebook.com/abdeldjouad.louafi/'},
-    { name: 'Instagram', image: '/img/socielmedia/instagram.png' , link:'https://www.instagram.com/salem_louafi/'},
-    { name: 'Whatsapp', image: '/img/socielmedia/whatsapp.png' , link:'https://wa.me/213673389128'},
-    { name: 'Telegram', image: '/img/socielmedia/telegram.png' , link:'https://t.me/+213673389128'},
-    { name: 'Linkedin', image: '/img/socielmedia/linkedin.png' , link:'https://www.linkedin.com/in/salem-louafi-off/'},
-    
+  const submitMessage = async () => {
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
+    try {
+      // Try EmailJS first (client-side)
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-  ];
-
-  const animateContacts = () => {
-    const testimonialsTL = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".Contacts-subtitle",
-        start: "top 80%",
+      if (serviceId && templateId && publicKey) {
+        const templateParams = {
+          from_name: info.Fname,
+          from_email: info.email,
+          message: info.message,
+        };
+        await emailjs.send(serviceId, templateId, templateParams, publicKey);
+        // EmailJS resolves even on some failures; if no throw, consider success
+        setSuccess('Message sent. Thank you!');
+        setInfo({ Fname: '', email: '', message: '' });
+        setLoading(false);
+        return;
       }
-    });
-  
-    testimonialsTL.to('.Contacts-title', {
-        y: 0,
-      opacity: 1,
-      duration: .35,
-    
-    });
-  
-    testimonialsTL.to('.Contacts-subtitle', {
-        y: 0,
-      opacity: 1,
-      duration: .25,
-      delay:.15
-    });
-  
-    testimonialsTL.to('.Contact-item', {
-        y: 0,
-      opacity: 1,
-      duration: .5,
-      stagger: 0.1,
-      delay:.3,
+
+      // Fallback to server-side API (nodemailer)
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: info }),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => ({}));
+        throw new Error(body?.error || `HTTP error! status: ${response.status}`);
+      }
+
+      setSuccess('Message sent (server). Thank you!');
+      setInfo({ Fname: '', email: '', message: '' });
+    } catch (e: any) {
+      setError(e?.message || 'Failed to send message');
+    } finally {
+      setLoading(false);
+    }
+  }
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInfo({
+      ...info,
+      [e.target.name]: e.target.value
     });
   };
-  
-  useEffect(() => {
-  animateContacts();
-  }, [])
-  
   return (
     <Grid 
     id='Contact'
@@ -96,37 +108,133 @@ sx={{fontWeight:200,fontSize:{xs:'.9em',sm:'.85em',md:'1em'}}}>
             maxWidth:{xs:'95%',sm:'sm',lg:'sm'}}}
              className='white auto center w100 justify-center h100 flex col'>
           
-  
 
-<Box sx={{pt:4,gap:2}} className='flex  w100 center items-center justify-center auto'>
- {/*  */}
- <Box sx={{maxWidth:'md'}} className='flex row gap2 auto wrap center'>
-                {contacts.map(i=>{
-                    return <a href={i.link} key={i?.name} target='_blank'>
-                      <Box
-                    key={i?.name}
-                    className='flex row tech-item Contact-item op0 y20  ' sx={{
-                      border: '1px solid #ffffff21 ',
-                      background: '#0c102178',
-                      // backgroundColor: '#0c1021 !Important',
-                      gap:1}}>
-                        <Box sx={{width:{xs:'20px'}}}>
-                            <Image src={i.image} alt="" className="image contain" width={20} height={20}/>
-                        </Box>
-                        <Box sx={{}}>
-                            <Typography sx={{color:'white'}}>
-                        {i?.name}
-                            </Typography>
-                        </Box>
-                    </Box></a>
-                })}
-            </Box>
- {/*  */}
+          <TextField
+  variant='outlined'
+  label='Full Name'
+  placeholder='Full Name'
+  name='Fname'
+ 
+value={info.Fname}
+onChange={handleInputChange}
+  sx={{
+    color: 'black',
+    backgroundColor: 'white',
+    '&:hover': {
+      backgroundColor: 'white',
+    },
+    '& .MuiFilledInput-underline:before': {
+      borderBottomColor: 'white',
+    },
+    '& .MuiFilledInput-underline:after': {
+      borderBottomColor: 'white',
+    },
+  }}
+/>
+
+<TextField
+name='email'
+value={info.email}
+onChange={handleInputChange}
+  variant='outlined'
+  label='Email Address'
+  placeholder='Email Address'
+  
+  type='email'
+  sx={{
+    my:2,
+    color: 'white !important',
+
+    backgroundColor: 'white',
+    '&:hover': {
+
+
+      backgroundColor: 'white',
+    },
+    '& .MuiFilledInput-underline:before': {
+      borderBottomColor: 'white',
+      color: 'white !important',
+
+
+    },
+    '& .MuiFilledInput-underline:after': {
+      borderBottomColor: 'white',
+    color: 'white !important',
+
+    },
+  }}
+/>
+
+<TextField
+name='message'
+value={info.message}
+onChange={handleInputChange}
+  variant='outlined'
+  label='Your Message'
+  placeholder='Your Message'
+
+  type='text'
+  rows={3}
+
+  multiline
+  sx={{
+    color: 'white',
+    backgroundColor: 'white',
+    '&:hover': {
+      backgroundColor: 'white',
+    },
+    '& .MuiFilledInput-underline:before': {
+      borderBottomColor: 'white',
+    },
+    '& .MuiFilledInput-underline:after': {
+      borderBottomColor: 'white',
+    },
+  }}
+/>
+          
+
+<Box sx={{
+          pt:4,gap:2}} className='flex  w100 center items-center justify-center auto'>
+
         
-      
+        <Btn3 
+           onClick={(e : any)=>{
+            e.preventDefault();
+            submitMessage()
+          }}
+        className='flex gap gap2 '
+        
+        styles={{background:'black',
+        width:'200px',
+        fontWeight:'500'}}>
+        <>
+        {loading ? 'Sending...' : 'Send Message'}
+
+        {/* icon */}
+        <Box sx={{ ml: 1, display: 'flex', alignItems: 'center' }}>
+          <Image src="https://cdn-icons-png.flaticon.com/128/1933/1933005.png" alt="send" width={20} height={20} className="img" />
+        </Box>
+        </>
+
+        </Btn3>
        
         </Box>
-       
+        {/* status messages */}
+        <Box sx={{ pt: 2, width: '100%', textAlign: 'center' }}>
+          {success && (
+            <Typography sx={{ color: '#00ff88', mb: 1 }}>{success}</Typography>
+          )}
+          {error && (
+            <Typography sx={{ color: '#ff6b6b', mb: 1 }}>{error}</Typography>
+          )}
+        </Box>
+
+        {/* <Box className="w100 auto center flex" sx={{pt:2}}>
+
+        <a href='mailto:contact@vito-medlej.com' className='clr2' target='_blank'>
+          Contact@vito-medlej.com
+        </a>
+        </Box> */}
 
           </Box>
            
@@ -134,4 +242,4 @@ sx={{fontWeight:200,fontSize:{xs:'.9em',sm:'.85em',md:'1em'}}}>
   )
 }
 
-export default Contact
+export default Portfolio
