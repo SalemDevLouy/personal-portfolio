@@ -41,7 +41,7 @@ const educationSteps = [
   {
     id: 4,
     year: "2024",
-    title: "React & Next.js Specialization",
+    title: "React+Next.js & Nest.js  Specialization",
     institution: "Online Courses / Self-Learning",
     description:
       "Advanced training in React and Next.js, mastering scalable web app development, UI/UX integration, and modern frontend practices.",
@@ -50,13 +50,13 @@ const educationSteps = [
   },
   {
     id: 5,
-    year: "2024-2025",
-    title: "Master’s in Software Engineering",
-    institution: "University of Constantine 2",
+    year: "2024-2026",
+    title: "Master’s in Software Engineering and intelligent systems",
+    institution: "University of Constantine 2 Abdelhamid Mehri",
     description:
       "Started my Master's degree in Software Engineering, focusing on advanced topics including distributed systems, software architecture, and artificial intelligence.",
     type: "university",
-    status: "in-progress",
+    status: "completed",
   },
   {
     id: 6,
@@ -67,6 +67,16 @@ const educationSteps = [
       "Expanding expertise in artificial intelligence, DevOps practices, and server/cloud administration. Actively developing SaaS platforms, POS systems, and mobile applications.",
     type: "ongoing",
     status: "in-progress",
+  },
+  {
+    id: 7,
+    year: "JUIN 2026",
+    title: "Master’s Degree Completion",
+    institution: "University of Constantine 2 Abdelhamid Mehri",
+    description:
+      "Expected to complete my Master's degree in Software Engineering and intelligent systems, with a focus on advanced software development, AI integration, and cloud-based solutions.",
+    type: "degree",
+    status: "completed",
   },
 ]
 
