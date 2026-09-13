@@ -36,6 +36,12 @@ const Portfolio = () => {
         setInfo({ Fname: '', email: '', message: '' });
         setLoading(false);
         return;
+      } else {
+        console.warn('EmailJS env vars missing:', {
+          serviceId: !!serviceId,
+          templateId: !!templateId,
+          publicKey: !!publicKey,
+        });
       }
 
       // Fallback to server-side API (nodemailer)
@@ -55,7 +61,13 @@ const Portfolio = () => {
       setSuccess('Message sent (server). Thank you!');
       setInfo({ Fname: '', email: '', message: '' });
     } catch (e: any) {
-      setError(e?.message || 'Failed to send message');
+      console.error('Contact form error:', e);
+      const detail =
+        e?.text || // EmailJS error text
+        e?.message ||
+        (e?.status ? `EmailJS error ${e.status}` : '') ||
+        'Failed to send message';
+      setError(detail);
     } finally {
       setLoading(false);
     }

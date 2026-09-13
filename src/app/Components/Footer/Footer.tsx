@@ -3,9 +3,14 @@ import { Box, Container, Divider, Typography } from '@mui/material'
 import React from 'react'
 import SMicons from '../SMicons/SMicons'
 import { useRouter } from 'next/navigation'
+import { useSectionData } from '@/hooks/useSectionData'
+import { fallbackSettings } from '@/lib/data/fallback'
+import type { Settings } from '@/types'
 
 const Footer = () => {
   const router = useRouter()
+  const { data: settings } = useSectionData<Settings>('settings', [fallbackSettings])
+  const email = settings?.[0]?.email || fallbackSettings.email
 
   return (
     <footer className='w100'>
@@ -34,11 +39,11 @@ const Footer = () => {
                     </Box> 
                     <a 
                     target="_blank"
-                    href="mailto:louafisalem79@gmail.com"
+                    href={`mailto:${email}`}
                     
                     className="decor-none white">
                                 <Typography className='white'>
-                                louafisalem79@gmail.com
+                                {email}
                                 </Typography>
                     </a>
                         </Box>

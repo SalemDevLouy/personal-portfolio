@@ -16,6 +16,7 @@ import Image from 'next/image'
 import ReviewSection from './Components/ReviewsDEST/ReviewSection'
 import Testimonials from './Components/Testimonials/Testimonials'
 import About from './Components/About/About'
+import Certifications from './Components/Certifications/Certifications'
 
 
 
@@ -62,6 +63,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 
     <Education/>
+        <Box sx={{
+          backgroundColor: 'black',
+           zIndex:'10',
+          pt:6}}>
+        <div className="custom-br">
+      <div className="left-edge"></div>
+      <div className="right-edge"></div>
+    </div>
+        </Box>
+        
+    <Certifications/>
         <Box sx={{
           backgroundColor: 'black',
            zIndex:'10',

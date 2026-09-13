@@ -1,88 +1,15 @@
 "use client"
 import { Grid, Box, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
-import Btn3 from '../Btn/Btn3'
 import {gsap } from 'gsap';
-import Image from 'next/image'
 import EduCard from './EduCard';
-
-// Education data
-const educationSteps = [
-  {
-    id: 1,
-    year: "2021",
-    title: "Start of University Journey",
-    institution: "University of Djelfa",
-    description:
-      "Began my academic path in computer science, studying programming fundamentals, mathematics, and core algorithms.",
-    type: "university",
-    status: "completed",
-  },
-  {
-    id: 2,
-    year: "2021-2022",
-    title: "Web Development Foundations",
-    institution: "University of Djelfa",
-    description:
-      "Built a strong foundation in web technologies, including HTML, CSS, JavaScript, and database management, while applying concepts in academic projects.",
-    type: "university",
-    status: "completed",
-  },
-  {
-    id: 3,
-    year: "2022-2024",
-    title: "Bachelor’s Degree in Web Development",
-    institution: "University of Djelfa",
-    description:
-      "Graduated with a Bachelor's degree in Web Development (Computer Science). Completed a final project focused on building modern web applications.",
-    type: "degree",
-    status: "completed",
-  },
-  {
-    id: 4,
-    year: "2024",
-    title: "React+Next.js & Nest.js  Specialization",
-    institution: "Online Courses / Self-Learning",
-    description:
-      "Advanced training in React and Next.js, mastering scalable web app development, UI/UX integration, and modern frontend practices.",
-    type: "certificate",
-    status: "completed",
-  },
-  {
-    id: 5,
-    year: "2024-2026",
-    title: "Master’s in Software Engineering and intelligent systems",
-    institution: "University of Constantine 2 Abdelhamid Mehri",
-    description:
-      "Started my Master's degree in Software Engineering, focusing on advanced topics including distributed systems, software architecture, and artificial intelligence.",
-    type: "university",
-    status: "completed",
-  },
-  {
-    id: 6,
-    year: "2025-Present",
-    title: "Continuous Learning (AI, DevOps, Cloud)",
-    institution: "Self-Learning & Personal Projects",
-    description:
-      "Expanding expertise in artificial intelligence, DevOps practices, and server/cloud administration. Actively developing SaaS platforms, POS systems, and mobile applications.",
-    type: "ongoing",
-    status: "in-progress",
-  },
-  {
-    id: 7,
-    year: "JUIN 2026",
-    title: "Master’s Degree Completion",
-    institution: "University of Constantine 2 Abdelhamid Mehri",
-    description:
-      "Expected to complete my Master's degree in Software Engineering and intelligent systems, with a focus on advanced software development, AI integration, and cloud-based solutions.",
-    type: "degree",
-    status: "completed",
-  },
-]
-
-
+import { useSectionData } from '@/hooks/useSectionData';
+import { fallbackEducation } from '@/lib/data/fallback';
+import type { Education } from '@/types';
 
 const Portfolio = () => {
+
+  const { data: steps, loading } = useSectionData<Education>('education', fallbackEducation);
 
   const animateEducation = () => {
     gsap.to('.title-edu1', {
@@ -152,12 +79,10 @@ const Portfolio = () => {
   
 
   useEffect(() => {
+    if (loading) return;
     animateEducation();
-  }, [])
-
-
-
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading, steps]);
 
   return (
     <Grid id='portfolio' container className='flex auto' sx={{
@@ -217,9 +142,8 @@ const Portfolio = () => {
         }} />
 
         {/* Education Steps */}
-        {educationSteps.map((step, index) => (
-
-          <EduCard key={step.id} step={step} index={index}  />
+        {steps.map((step, index) => (
+          <EduCard key={step._id ?? `${step.year}-${step.title}-${step.institution}`} step={step} index={index}  />
         ))}
       </Box>
 

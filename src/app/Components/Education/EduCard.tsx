@@ -1,17 +1,9 @@
 'use client'
 import { Grid, Box, Typography } from '@mui/material'
-  import React,{useState} from 'react'
-type EducationStep = {
-    id: number,
-    year: string,
-    title: string,
-    institution: string,
-    description: string,
-    type: string,
-    status: string
-}
+import React,{useState} from 'react'
+import type { Education } from '@/types'
 
-export default function EduCard({step, index}: {step: EducationStep, index: number}) {
+export default function EduCard({step, index}: {step: Education, index: number}) {
    const [position, setPosition] = React.useState({ x: 0, y: 0 });
    const [isHovered, setIsHovered] = React.useState(false);
  
@@ -32,7 +24,7 @@ export default function EduCard({step, index}: {step: EducationStep, index: numb
    };
  
   return (
-    <Box key={step.id} className='edu-card op0 y20' sx={{
+    <Box className='edu-card op0 y20' sx={{
             position: 'relative',
             mb: 2,
             display: 'flex',

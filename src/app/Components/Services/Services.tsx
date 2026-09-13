@@ -5,8 +5,13 @@ import Btn3 from '../Btn/Btn3'
 import PricingCard from './PricingCard'
 import { gsap } from 'gsap'
 import Image from 'next/image'
+import { useSectionData } from '@/hooks/useSectionData'
+import { fallbackServices } from '@/lib/data/fallback'
+import type { Service } from '@/types'
 
 const Services = () => {
+  const { data: services, loading } = useSectionData<Service>('services', fallbackServices)
+
   const animateServices = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -32,8 +37,10 @@ const Services = () => {
   }
 
   useEffect(() => {
+    if (loading) return
     animateServices()
-  }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading])
 
   return (
     <Grid
@@ -52,7 +59,6 @@ const Services = () => {
       }}
       className="flex auto"
     >
-      {/* Section Title */}
       <Box className="auto col flex center" sx={{ width: '100%', py: 4 }}>
         <Typography
           className="white text-center auto services-title op0 y10"
@@ -72,89 +78,29 @@ const Services = () => {
         </Typography>
       </Box>
 
-      {/* Service Cards */}
       <Box
-  sx={{
-    maxWidth: { sm: '100%', md: '95%', lg: 'lg' },
-    gap: { xs: 1.5, sm: 2 },
-  }}
-  className="white auto w100 justify-between flex row wrap"
->
-  <PricingCard
-    className="service-item"
-    miniTitle="Enterprise Web Platforms"
-    title="Full-Stack Web Development"
-    perks={[
-      `Scalable web platforms using Next.js, NestJS, and the MERN stack.`,
-      `Enterprise-grade SaaS, admin dashboards, and real-time data tools.`,
-      `Optimized for SEO, performance, and high-availability deployment.`,
-    ]}
-    sx={{ width: { xs: '100%', md: '48%' } }}
-  />
+        sx={{
+          maxWidth: { sm: '100%', md: '95%', lg: 'lg' },
+          gap: { xs: 1.5, sm: 2 },
+        }}
+        className="white auto w100 justify-between flex row wrap"
+      >
+        {services.map((service, idx) => (
+          <PricingCard
+            key={service._id ?? service.title}
+            className="service-item"
+            miniTitle={service.miniTitle}
+            title={service.title}
+            text={service.description}
+            perks={service.perks || []}
+            sx={{
+              mt: idx % 2 === 1 ? { xs: 1.5, sm: 2 } : 0,
+              width: { xs: '100%', md: '48%' },
+            }}
+          />
+        ))}
+      </Box>
 
-  {/* <PricingCard
-    className="service-item"
-    miniTitle="Cross-Platform Desktop Apps"
-    title="Business Management Systems"
-    perks={[
-      `POS, ERP, and inventory management apps built with Electron + SQLite/Cloud sync.`,
-      `Offline-first systems with secure backup & seamless updates.`,
-      `Advanced analytics dashboards for sales, stock, and operations.`,
-    ]}
-    sx={{ mt: { xs: 1.5, sm: 2, md: 0 }, width: { xs: '100%', md: '48%' } }}
-  /> */}
-
-  <PricingCard
-    className="service-item"
-    miniTitle="Mobile-First Experience"
-    title="Cross-Platform Mobile Apps"
-    perks={[
-      `React Native + Expo apps for logistics, delivery, and booking platforms.`,
-      `Native APIs, biometric auth, and push notifications integrated.`,
-      `Clean, responsive UI with NativeWind and smooth animations.`,
-    ]}
-    sx={{ mt: { xs: 1.5, sm: 2 }, width: { xs: '100%', md: '48%' } }}
-  />
-
-  <PricingCard
-    className="service-item"
-    miniTitle="AI, Data & Workflow Automation"
-    title="Intelligent Business Systems"
-    perks={[
-      `Custom GPT-powered assistants for customer support and knowledge bases.`,
-      `Automations for content generation, CRM, and data synchronization.`,
-      `Integration with Zapier, n8n, and cloud APIs to eliminate manual tasks.`,
-    ]}
-    sx={{ mt: { xs: 1.5, sm: 2 }, width: { xs: '100%', md: '48%' } }}
-  />
-
-  <PricingCard
-    className="service-item"
-    miniTitle="Cloud & Infrastructure"
-    title="DevOps & Cloud Engineering"
-    perks={[
-      `End-to-end CI/CD pipelines with Docker, GitHub Actions, and Kubernetes.`,
-      `Managed deployments on AWS, Vercel, or Render with zero downtime.`,
-      `Infrastructure monitoring, logging, and scaling strategy design.`,
-    ]}
-    sx={{ mt: { xs: 1.5, sm: 2 }, width: { xs: '100%', md: '48%' } }}
-  />
-{/* 
-  <PricingCard
-    className="service-item"
-    miniTitle="Data Intelligence"
-    title="Analytics & Visualization"
-    perks={[
-      `Custom dashboards with Superset, Metabase, or Next.js visual layers.`,
-      `Advanced ETL and data modeling pipelines for SaaS and eCommerce.`,
-      `Integrations with Google Analytics, PostgreSQL, and REST APIs.`,
-    ]}
-    sx={{ mt: { xs: 1.5, sm: 2 }, width: { xs: '100%', md: '48%' } }}
-  /> */}
-</Box>
-
-
-      {/* CTA */}
       <Box sx={{ pt: 6 }} className="flex w100 center items-center justify-center auto">
         <Btn3
           onClick={(e: any) => {

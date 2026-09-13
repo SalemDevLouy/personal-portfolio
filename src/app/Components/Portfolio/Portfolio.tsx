@@ -33,19 +33,6 @@ const Portfolio = () => {
         start: "top 80%",
       }
     });
-  
-    gsap.to('.project-item', {
-        y: 0,
-      opacity: 1,
-      duration: .5,
-      stagger: 0.2,
-      delay:.25,
-
-      scrollTrigger: {
-        trigger: ".project-item",
-        start: "top 80%",
-      }
-    });
     gsap.to('.swiper-button-next', {
       y: 0,
     opacity: 1,
