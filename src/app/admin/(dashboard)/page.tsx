@@ -126,7 +126,7 @@ export default function DashboardPage() {
           color="text.secondary"
           sx={{ fontSize: { xs: ".9rem", sm: "1rem" } }}
         >
-          Welcome back! Here's an overview of your portfolio content.
+          Welcome back! Here&apos;s an overview of your portfolio content.
         </Typography>
       </Box>
 
